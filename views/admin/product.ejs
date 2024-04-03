@@ -1,0 +1,63 @@
+<div class="product-list">
+    <h1>Car Item List</h1>
+
+    <table>
+        <thead>
+            <th>S.N.</th>
+            <th>Item image</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Seller</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>images</td>
+                <td>Car Name</td>
+                <td>Brand Name</td>
+                <td>Model Name</td>
+                <td>Seller Name</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <button onclick="showForm(event)" class="btn"> Add Products</button>
+
+    <div class="form" style="display: none;" id="myForm">
+        <form action="" method="post"  class="forms">
+            <label for="">Product Name</label><br>
+            <input type="text" name="name" placeholder="Enter Product Name">
+            <br><br>
+            <label for="">Brand</label><br>
+            <input type="text" name="brand" placeholder="Enter Brand Name">
+            <br><br>
+
+            <label for="">Model Name</label><br>
+            <input type="text" placeholder="Enter Model Name" name="model">
+            <br><br>
+
+            <label for="">Product Image</label><br>
+            <input type="file" value="image">
+            <br><br>
+
+            <input type="submit" value="submit" class="btn">
+
+        </form>
+    </div>
+    
+</div>
+
+<script>
+    function showForm(event){
+        event.preventDefault();
+        var form = document.getElementById('myForm');
+        form.style.display = 'block';
+    }
+</script>
+
+
+
+
+
+

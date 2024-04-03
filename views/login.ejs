@@ -1,0 +1,33 @@
+<head>
+    <link rel="stylesheet" href="/CSS/loginregister.css">
+</head>
+<div class="login-register">
+    
+    <img src="/logo.png" alt="" style=" width: 13rem; height: 10rem;">
+    <h2>Login</h2>
+        <form action="" method="POST">
+         <% 
+            if(typeof message !== 'undefined'){
+                %>
+                    <p style="color: red;"><%= message %></p>
+                <%
+            }
+        %>
+        <label for="">Email:</label>
+        <input type="email" name="email" placeholder="Enter email" required>
+        <br><br>
+        <% 
+            if(typeof message !== 'undefined'){
+                %>
+                    <p style="color: red;"><%= message %></p>
+                <%
+            }
+        %>
+        <label for="">Password:</label>
+        <input type="password" name="password" placeholder="Enter Pssword" required>
+        <br><br>
+        <input type="submit" value="Login" class="btn">
+
+        <p>New Here. <a href="/register">Register Now</a></p>
+    </form>
+</div>

@@ -1,0 +1,27 @@
+<div class="form">
+    <h1>Add Categories</h1>
+    <form action="" method="post" id="cat-form" class="forms">
+        <label for="">Brand Name</label><br>
+        <input type="text" name="brand" placeholder="Brand Name">
+        <br><br>
+        <label for="">Sub Brand</label><br>
+        <input type="text" name="sub-category" placeholder="Sub Category" id="sub">
+        <br><br>
+        <button class=" btn1 btn-primary" onclick="addFields(event)">Add Sub Brand</button>
+        <br><br>
+        <input type="submit" value="Add" class=" btn btn-primary">
+    </form>
+</div>
+
+<script>
+    function addFields(event){
+        event.preventDefault();
+        var form = document.getElementById('cat-form');
+        var subBrandInput = document.createElement('input');
+        subBrandInput.type = 'text';
+        subBrandInput.placeholder = 'Sub Category';
+        subBrandInput.name = 'sub-category[]';
+        form.insertBefore(subBrandInput, form.lastElementChild);
+        form.insertBefore(document.createElement('br'), form.lastElementChild);
+    }
+</script>

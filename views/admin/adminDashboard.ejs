@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Admin</title>
+
+</head>
+<body>
+    <div class="container">
+        <aside>
+
+            <div class="top">
+                <!-- logo -->
+                <div class="logo">
+                    <!-- <img src="logo3.png" alt=""> -->
+                    <h2>Car<span class="danger">Chain</span></h2>
+                </div>
+                
+                <div class="close">
+                    <span class="material-symbols-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <!-- Menu -->
+            <div class="sidebar">
+                <a href="#" class="active"  onclick="showElement('dashboard')">
+                    <span class="material-symbols-sharp ">
+                        Dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="#" onclick="showElement('user')">
+                    <span class="material-symbols-sharp">
+                        Group
+                    </span>
+                    <h3>User</h3>
+                </a>
+
+                <a href="#" onclick="showElement('product')">
+                    <span class="material-symbols-sharp">
+                        inventory_2 
+                    </span>
+                    <h3>Products</h3>
+                </a>
+
+                <a href="#" onclick="showElement('order')">
+                    <span class="material-symbols-sharp">
+                        shopping_bag
+                    </span>
+                    <h3>Orders</h3>
+                </a>
+                <a href="#" onclick="showElement('category')">
+                    <span class="material-symbols-sharp">
+                        category
+                    </span>
+                    <h3>Category</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        Settings
+                    </span>
+                    <h3>Setting</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-sharp">
+                        logout
+                    </span>
+                    <h3>logout</h3>
+                </a>
+            </div>
+        </aside>
+
+
+        <!-- Main page -->
+        <main >
+            <div class="dash"  id="dashboard"> 
+                <h1>Dashboard</h1>
+
+                <div class="insight">
+                    <div class="users">
+                        <span class="material-symbols-sharp">people</span>
+                        <div class="middle">
+                            <div class="left">
+                                <h4>Total Users</h4>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle r="20" cy="40" cx="40"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prouct -->
+                    <div class="products">
+                        <span class="material-symbols-sharp">directions_car</span>
+                        <div class="middle">
+                            <div class="left">
+                                <h4>Total Product</h4>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle r="20" cy="40" cx="40"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total bidder -->
+                    <div class="bidder">
+                        <span class="material-symbols-sharp">people</span>
+                        <div class="middle">
+                            <div class="left">
+                                <h4>Total Bidder</h4>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle r="20" cy="40" cx="40"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total Sellers -->
+                    <div class="seller">
+                        <span class="material-symbols-sharp">people</span>
+                        <div class="middle">
+                            <div class="left">
+                                <h4>Total Users</h4>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle r="20" cy="40" cx="40"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sold Cars -->
+                    <div class="sold">
+                        <span class="material-symbols-sharp">people</span>
+                        <div class="middle">
+                            <div class="left">
+                                <h4>Sold cars</h4>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle r="20" cy="40" cx="40"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product Page -->
+            <div class="product" id="product" style="display: none;">
+                <%- include('product.ejs') %>
+            </div>
+
+
+            <!-- User Page -->
+            <div class="user" style="display: none;" id="user">
+                <%- include('user.ejs') %>
+            </div>
+
+            <!-- Category -->
+            <div class="catetory" style="display: none;" id="category">
+                <%- include('category.ejs') %>
+            </div>
+
+            <!-- Orders -->
+            <div class="order"  id="order" style="display: none;">
+                <%- include('orders.ejs') %>
+            </div>
+        </main>
+
+
+
+        <!-- Right Side -->
+        <div class="right">
+
+            <div class="top">
+                <button id="menu_bar">
+                    <span class="material-symbols-sharp">menu</span>
+                </button>
+                <div class="theme-toogle">
+                    <span class="material-symbols-sharp active">light_mode</span>
+                    <span class="material-symbols-sharp">dark_mode</span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p><b>Ukesh</b></p>
+                        <p>Admin</p>
+                        <small class="text-muted"></small>
+                    </div>
+                    <div class="profile-photo">
+                        <span class="material-symbols-sharp">account_circle</span>
+                        <img src="profile.png" alt="hi">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Activity -->
+            
+            <div class="recent_updates">
+                <h2>Recet Update</h2>
+                <div class="update">
+                    <div class="updates">
+                        <div class="profile-photo">
+                            <img src="profile.png" alt="profile">
+                        </div>
+                        <div class="message">
+                            <p><b>New item added</b></p>
+                        </div>
+                    </div>
+
+                    <div class="updates">
+                        <div class="profile-photo">
+                            <img src="profile.png" alt="profile">
+                        </div>
+                        <div class="message">
+                            <p><b>New item added</b></p>
+                        </div>
+                    </div>
+
+                    <div class="updates">
+                        <div class="profile-photo">
+                            <img src="profile.png" alt="profile">
+                        </div>
+                        <div class="message">
+                            <p><b>New item added</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="bid-win">
+                <h2>Bid Win</h2>
+
+                <div class="item online">
+                    <div class="icon">
+                        <span class="material-symbols-sharp">shopping_cart</span>
+                    </div>
+                    <div class="right_text">
+                        <div class="info">
+                            <h3>Bid Order</h3>
+                            <small class="text-muted">last</small>
+                        </div>
+                        <h3>Amount</h3>
+                    </div>
+                </div>
+
+                <div class="item online">
+                    <div class="icon">
+                        <span class="material-symbols-sharp">shopping_cart</span>
+                    </div>
+                    <div class="right_text">
+                        <div class="info">
+                            <h3>Bid Order</h3>
+                            <small class="text-muted">last</small>
+                        </div>
+                        <h3>Amount</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/JS/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/CSS/additional.css">
+    <link rel="stylesheet" href="/CSS/dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navb">
+            <img src="logo.png" alt="" class="logo">
+
+            <ul>
+                <li><a href="">Home</a></li>
+                <li id="drop" onclick="dropmenu(event)">
+                    <a href="#" >Auction
+                        <ul class="dropdown-menu" id="dropdown" style="display: none;">
+                            <li><a href="#">Live Auction</a></li>
+                            <li><a href="#">Timed Auction</a></li>
+                            <li><a href="#">Closed Auction</a></li>
+                        </ul>         
+                    </a>
+                </li>
+                <li><a href="seller">Seller</a></li>
+                <li><a href="">Cars</a></li>
+                <li><a href="">About</a></li>
+                
+                
+            </ul>
+            <div class="serchaccount">
+                <div class="search-box">
+                    <input type="text" name="search" id="" placeholder="Search">
+                    <span class="material-symbols-sharp ">
+                        search
+                    </span>
+                </div>
+                
+                <span class="material-symbols-sharp accounti" id="acc">
+                    account_circle
+                </span>
+            </div>
+        </div>
+
+        <div class="accountmenu" id="men">
+            <ul>
+                <li>Profile</li>
+                <li>History</li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="seller-container">
+        <h1>Add Products</h1>
+        <div class="form-container">
+            <form action="" method="post">
+                <button class="btn1">Add additional Data</button><br><br>
+                
+                <div class="column">
+                    <div class="colmn col1">
+                        <input type="text" name="brand" placeholder="Car Brand"><br><br>
+                    </div>
+                    <div class="colmn col1">
+                        <input type="text" name="Model" id="" placeholder="Car Model"><br><br>
+                    </div>
+                 </div>
+
+                 <div class="column">
+                    <div class="colmn col1">
+                        <input type="text" name="vin" placeholder="VIN"><br><br>
+                    </div>
+                    <div class="colmn col1">
+                        <input type="text" name="cylinder" id="" placeholder="Cylinder"><br><br>
+                    </div>
+                 </div>
+
+                 <div class="column">
+                    <div class="colmn col1">
+                        <input type="text" name="color" placeholder="Car Color"><br><br>
+                    </div>
+                    <div class="colmn col1">
+                        <input type="text" name="engine" id="" placeholder="Car Engine"><br><br>
+                    </div>
+                 </div>
+
+                 <div class="column">
+                    <div class="colmn col1">
+                        <input type="text" name="conditons" placeholder="Car Condition"><br><br>
+                    </div>
+                    <div class="colmn col1">
+                        <input type="file" name="car-image" placeholder="Image">
+                    </div>
+                 </div>
+
+                <input type="submit" value="Submit" class="btn btn-success bnt">
+            </form>
+        </div>
+    </div>  
+    
+    <div class="Histroy">
+        <h1>Your Past Products</h1>
+        <div class="card-container">
+            <div class="card">
+                <img src="car.png" alt="">
+                <i class="fa-solid fa-gavel"></i>
+                <div class="detail">
+                    <h1>Dacia</h1>
+                    <h4>1998 5509k</h4>
+                    <h3>Amount: 300000</h3>
+                </div>
+                <div>
+                    <button class="btn btn-success">Join Bid</button>
+                    <button class="btn btn-primary">View Details</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="car-2.png" alt="">
+                <div class="detail">
+                    <h1>Dacia</h1>
+                    <h4>1998 5509k</h4>
+                    <h3>Amount: 300000</h3>
+                </div>
+                <div>
+                    <button class="btn btn-success">Join Bid</button>
+                    <button class="btn btn-primary">View Details</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="car-3.png" alt="">
+                <div class="detail">
+                    <h1>Dacia</h1>
+                    <h4>1998 5509k</h4>
+                    <h3>Amount: 300000</h3>
+                </div>
+                <div>
+                    <button class="btn btn-success">Join Bid</button>
+                    <button class="btn btn-primary">View Details</button>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+</body>
